@@ -1,0 +1,36 @@
+<div class="top_wrapper">
+  <div class="top_inner">
+    <%= image_tag "logo.png", class: 'top_logo' %>
+    <h1 class="top_subtitle">「日本語ってむずかしい」をゼロに</h1>
+    <p class="top_about">kotohanoはあなたが書いた文章をユーザーがチェックし、<br>より良くするためのサービスです。</p>
+    <div class="top_btns">
+      <%= link_to(login_path) do %>
+        <button type="button" name="button" class="top_btn_a top_btn">
+          ログインする
+        </button>
+      <% end %>
+      <%= link_to(new_user_path) do %>
+        <button type="button" name="button" class="top_btn_b top_btn">
+          新規登録する
+        </button>
+      <% end %>
+    </div>
+  </div>
+  <div class="top_image">
+    <%= image_tag "mockuper.png", class: 'mockup_img' %>
+  </div>
+</div>
+<div class="index_wrapper cont">
+  <div class="post_inner index_inner">
+    <ul class="index_ul">
+      <% @posts.each do |post| %>
+        <%= link_to(post_path(post)) do %>
+          <li>
+            <p class="post_index_tit"><%= post.title %></p>
+            <p class="post_index_info"><%= post.user.name %></p>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

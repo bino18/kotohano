@@ -1,0 +1,19 @@
+<div class="post_wrapper cont">
+  <div class="post_new_inner post_inner">
+    <%= form_with model: @post, local: true do |form|%>
+      <div class="post_form">
+        <%= form.label :title,  "タイトル", class: 'form_label' %>
+        <%= form.text_field :title, class: 'post_input_tit' %>
+      </div>
+      <div class="post_form">
+        <%= form.label :body, "文章", class: 'form_label' %>
+        <%= form.text_area :body, class: 'post_input_con' %>
+      </div>
+      <div class="post_form">
+        <%= form.label :explanation,  "説明", class: 'form_label' %>
+        <%= form.text_area :explanation, class: 'post_input_con' %>
+      </div>
+      <%= form.submit "追記する", class: 'form_btn_a form_btn' %>
+    <% end %>
+  </div>
+</div>

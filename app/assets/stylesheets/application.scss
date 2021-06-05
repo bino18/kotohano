@@ -1,0 +1,299 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* color
+#3eb370 アイスブルー
+#d8d8d8 グレー
+#f8f8f8 ライトグレー
+#3eb370 緑
+ */
+
+@import "reset";
+
+ * {
+   box-sizing: border-box;
+   table-layout: fixed;
+ }
+
+ html {
+   height: 100%;
+ }
+
+ body {
+   margin: 0;
+   font-family: "ヒラギノ角ゴ ProN W3";
+   line-height: 1.7;
+   letter-spacing: 1px;
+   height: 100%;
+   background-color: #f8f8f8;
+ }
+
+ div {
+   display: block;
+ }
+
+ ul, li {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+ }
+
+ a {
+   text-decoration: none;
+   color: #000;
+   font-size: 14px;
+ }
+
+ h1, h2 {
+   font-weight: normal;
+ }
+
+ .flash {
+   color: #fff;
+   background-color: #3eb370;
+   text-align: center;
+   padding: 5px;
+ }
+
+ .cont {
+   max-width: 1260px;
+   min-height: 90vh;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 5%;
+   padding-right: 5%;
+   color: #000;
+ }
+
+ .inner {
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .title {
+
+ }
+
+ .form_label {
+   margin-bottom: 10px;
+   display: block;
+   text-align: left;
+ }
+
+ .form_btn {
+   padding: 10px;
+   outline: none;
+   width: 300px;
+   height: 50px;
+   font-size: 17px;
+   color: #fff;
+   border-radius: 5px;
+   transition-property: background-color, color;
+   transition-duration: 0.3s;
+ }
+
+ .form_btn_a {
+   margin-top: 5px;
+   background-color: #3eb370;
+ }
+
+ .form_btn_a:hover {
+   color: #3eb370;
+   border: 1px solid #3eb370;
+   background-color: #fff;
+ }
+
+ .form_btn_b {
+   margin-top: 10px;
+   background-color: #000;
+ }
+
+ .form_btn_b:hover {
+   color: #000;
+   border: 1px solid #000;
+   background-color: #fff;
+ }
+
+ /* header */
+ .header_wrapper {
+   background-color: #fff;
+   border-bottom: 1px solid #d8d8d8;
+ }
+
+ .header_inner {
+   max-width: 1400px;
+   height: 65px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 15px;
+   padding-right: 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .header_logo {
+   width: 80px;
+   margin-top: 5px;
+ }
+
+ .header_nav {
+ }
+
+ .header_menus {
+   display: flex;
+   position: relative;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .header_menus li {
+   margin-left: 10px;
+ }
+
+ .header_menus a {
+   display: block;
+   padding: 8px;
+   height: 100%;
+ }
+
+ .header_new_btn {
+   background-color: #3eb370;
+   color: #fff;
+   border-radius: 5px;
+   width: 80px;
+   text-align: center;
+ }
+
+ .fa-pen-fancy {
+   margin-right: 2px;
+ }
+
+ .header_new_btn p {
+   display: inline-block;
+ }
+
+ .header_avatar {
+   width: 35px;
+   height: 35px;
+   border-radius: 50px;
+   margin-top: 8px;
+   cursor: pointer;
+ }
+
+ .accoedion {
+
+ }
+
+ .accordion_cont {
+   position: absolute;
+   top: 52px;
+   left: 20%;
+   text-align: left;
+   line-height: 0;
+   height: 0;
+   width: 150px;
+   overflow: hidden;
+   opacity: 0;
+   transition-duration: 0.4s;
+ }
+
+ .accordion_cont.is-open {
+   opacity: 1;
+   border: 1px solid #d8d8d8;
+   background-color: #fff;
+   padding: 3px;
+   line-height: normal;
+   height: auto;
+}
+
+
+
+ /* footer */
+.footer_wrapper {
+  min-height: 200px;
+  margin-top: 100px;
+  padding-top: 50px;
+  background-color: #fff;
+  border-top: 1px solid #d8d8d8;
+  text-align: center;
+}
+
+.footer_logo {
+  width: 200px;
+}
+
+
+/* responsive */
+@media (max-width: 800px) {
+  .cont {
+
+  }
+
+  /* top */
+  .top_wrapper {
+    display: block;
+    min-height: initial;
+    margin-bottom: 50px;
+  }
+
+  .top_image {
+    display: none;
+  }
+
+  .top_inner {
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .top_title {
+    padding-top: 0px;
+  }
+
+  .about_wrapper {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .cont {
+    max-width: 500px;
+  }
+
+  /* top */
+  .about_boxies {
+    display: block;
+  }
+
+  .about_box {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+
+  /* post */
+  .post_input_con {
+    height: 300px;
+  }
+
+  /* user */
+  .user_inner {
+    text-align: center;
+  }
+}

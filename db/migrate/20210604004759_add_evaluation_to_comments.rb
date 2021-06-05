@@ -1,0 +1,5 @@
+class AddEvaluationToComments < ActiveRecord::Migration[5.2]
+  def change
+    add_column :comments, :evaluation, :float
+  end
+end

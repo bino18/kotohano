@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>kotohano</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+    <meta name = 'viewport' content = 'width=device-width', initial-scale=1>
+    <%= favicon_link_tag('favicon.ico') %>
+  </head>
+
+  <body>
+    <header class="header_wrapper">
+      <div class="header_inner">
+        <div class="logo">
+          <% if current_user %>
+            <%= link_to current_user do %>
+            <%= image_tag "logo.png", class: 'header_logo' %>
+          <% end %>
+        <% else %>
+            <%= link_to '/' do %>
+            <%= image_tag "logo.png", class: 'header_logo' %>
+          <% end %>
+        <% end %>
+
+        </div>
+        <nav class="header_nav">
+          <ul class="header_menus">
+            <% if current_user %>
+              <li><%= link_to('投稿一覧', posts_path) %></li>
+              <li class="accoedion">
+                <% if current_user.avatar.attached? %>
+                  <%= image_tag current_user.avatar, class: "header_avatar" %>
+                <% else %>
+                  <%= image_tag "/user_images/default_icon.jpg", class: "header_avatar" %>
+                <% end %>
+                <div class="accordion_cont">
+                  <ul>
+                    <li><%= link_to(current_user.name, current_user) %></li>
+                    <li><%= link_to('ログアウト', logout_path, method: :delete) %></li>
+                  </ul>
+                </div>
+
+              </li>
+              <li>
+              <%= link_to(new_post_path, class: 'header_new_btn') do %>
+                <i class="fas fa-pen-fancy"></i>
+                <p>投稿</p>
+              <% end %>
+              </li>
+
+            <% else %>
+              <%= link_to(new_user_path) do %>
+                <li>新規登録</li>
+              <% end %>
+              <%= link_to(login_path) do %>
+                <li>ログイン</li>
+              <% end %>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <% if flash.notice.present? %>
+      <div class="flash">
+        <%= flash.notice %>
+      </div>
+    <% end %>
+    <%= yield %>
+    <footer class="footer_wrapper">
+      <%= image_tag "logo.png", class: 'footer_logo' %>
+    </footer>
+
+  </body>
+</html>

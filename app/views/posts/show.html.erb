@@ -1,0 +1,103 @@
+<div class="post_wrapper cont">
+  <div class="post_show_inner post_inner">
+    <h2 class="post_show_tit"><%= @post.title %></h2>
+    <div class="post_info">
+      <div class="post_info_left">
+        <% if @post.user.avatar.attached? %>
+          <%= image_tag @post.user.avatar, class: "user_avatar" %>
+        <% else %>
+          <%= image_tag "/user_images/default_icon.jpg", class: "user_avatar" %>
+        <% end %>
+      </div>
+      <div class="post_info_right">
+        <p><%= @post.user.name %></p>
+        <p><%= @post.created_at.strftime("%Y-%m-%d %H:%M") %></p>
+      </div>
+    </div>
+    <p class="post_content">
+      <%= safe_join(@post.body.split("\n"), tag(:br)) %>
+    </p>
+    <p class="post_content">
+      <%= safe_join(@post.explanation.split("\n"), tag(:br)) %>
+    </p>
+    <% if current_user %>
+      <% if @post.user_id == current_user.id %>
+        <div class="post_bottom">
+          <%= link_to('編集', edit_post_path) %>
+          <%= link_to('削除', @post, method: :delete) %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="comment_inner post_inner">
+    <h3 class="post_show_tit">コメント</h3>
+    <% if @post.comments.any? %>
+    <ul class="comment_ul">
+      <% @post.comments.each do |comment| %>
+          <li>
+            <div class="post_info">
+              <div class="post_info_left">
+                <% if comment.user.avatar.attached? %>
+                  <%= image_tag comment.user.avatar, class: "user_avatar" %>
+                <% else %>
+                  <%= image_tag "/user_images/default_icon.jpg", class: "user_avatar" %>
+                <% end %>
+              </div>
+              <div class="post_info_right">
+                <p><%= comment.user.name %></p>
+                <p><%= comment.created_at.strftime("%Y-%m-%d %H:%M") %></p>
+              </div>
+              <p class="comment-evaluation" data-score="<%= comment.evaluation %>"></p>
+            </div>
+            <p class="post_content">
+              <%= safe_join(comment.content.split("\n"), tag(:br)) %>
+            </p>
+            <% if current_user %>
+              <% if comment.user_id == current_user.id %>
+              <div class="post_bottom">
+                <%= link_to('削除', post_comment_path(@post, comment), method: :delete) %>
+              </div>
+              <% end %>
+            <% end %>
+          </li>
+      <% end %>
+    </ul>
+    <script>
+      $('.comment-evaluation').raty({
+        readOnly: true,
+        score: function() {
+          return $(this).attr('data-score');
+        },
+        path: '/assets/'
+      });
+    </script>
+    <% end %>
+    <% if current_user %>
+    <div class="comment_form">
+      <%= form_with(model: [@post, @comment], local: true) do |form|%>
+        <div class="post_form">
+          <%= form.label :content, "コメントを投稿する", class: 'comment_form_label' %>
+          <%= form.text_area :content, class: 'comment_input_con' %>
+          <div id="evaluate_stars">
+            <label>評価</label>
+          </div>
+        </div>
+
+        <%= form.submit "投稿する", class: 'comment_new_btn form_btn' %>
+      <% end %>
+    </div>
+    <% else %>
+      <div class="comment_bottom">
+        <%= link_to('ログインしてコメントする', login_path) %>
+      </div>
+    <% end %>
+  </div>
+  <script>
+    $('#evaluate_stars').raty({
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    scoreName: 'post[evaluation]'
+    });
+  </script>
+</div>

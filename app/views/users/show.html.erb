@@ -1,0 +1,26 @@
+<div class="user_wrapper cont">
+  <div class="user_inner post_inner">
+    <% if @user.avatar.attached? %>
+      <%= image_tag @user.avatar, class: "user_avatar" %>
+    <% else %>
+      <%= image_tag "/user_images/default_icon.jpg", class: "user_avatar" %>
+    <% end %>
+    <h2><%= @user.name %></h2>
+    <div class="user_bottom">
+      <%= link_to('編集', edit_user_path) %>
+      <%= link_to('削除', @user, method: :delete) %>
+    </div>
+  </div>
+  <div class="post_inner user_index_inner">
+    <ul class="index_ul">
+      <% @user.posts.each do |post| %>
+        <%= link_to(post_path(post)) do %>
+          <li>
+            <p class="post_index_tit"><%= post.title %></p>
+            <p class="post_index_info"><%= post.user.name %></p>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
