@@ -7,11 +7,11 @@
       </div>
       <div class="post_form">
         <%= form.label :body, "文章", class: 'form_label' %>
-        <%= form.text_area :body, class: 'post_input_con' %>
+        <%= form.text_area :body, class: 'post_input_con post_input_body', placeholder: 'チェックしてほしい文章を入力してください' %>
       </div>
       <div class="post_form">
-        <%= form.label :explanation,  "説明", class: 'form_label' %>
-        <%= form.text_area :explanation, class: 'post_input_con' %>
+        <%= form.label :explanation,  "文章についての説明", class: 'form_label' %>
+        <%= form.text_area :explanation, class: 'post_input_con post_input_exp', placeholder: '誰が読むのか、どこに載せるのか、チェックしてほしいポイントなど' %>
       </div>
 
       <%= form.submit "投稿する", class: 'form_btn_a form_btn' %>

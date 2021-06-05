@@ -81,11 +81,10 @@
         <div class="post_form">
           <%= form.label :content, "コメントを投稿する", class: 'comment_form_label' %>
           <%= form.text_area :content, class: 'comment_input_con' %>
-          <div id="evaluate_stars">
-            <label>評価</label>
-          </div>
         </div>
-
+        <div id="evaluate_stars">
+          <label>評価</label>
+        </div>
         <%= form.submit "投稿する", class: 'comment_new_btn form_btn' %>
       <% end %>
     </div>

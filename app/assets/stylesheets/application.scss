@@ -14,7 +14,7 @@
  *= require_self
  */
 /* color
-#3eb370 アイスブルー
+#0F1111 黒
 #d8d8d8 グレー
 #f8f8f8 ライトグレー
 #3eb370 緑
@@ -52,7 +52,7 @@
 
  a {
    text-decoration: none;
-   color: #000;
+   color: #0F1111;
    font-size: 14px;
  }
 
@@ -74,7 +74,7 @@
    margin-right: auto;
    padding-left: 5%;
    padding-right: 5%;
-   color: #000;
+   color: #0F1111;
  }
 
  .inner {
@@ -91,6 +91,7 @@
    margin-bottom: 10px;
    display: block;
    text-align: left;
+   font-weight: bold;
  }
 
  .form_btn {
@@ -118,12 +119,12 @@
 
  .form_btn_b {
    margin-top: 10px;
-   background-color: #000;
+   background-color: #0F1111;
  }
 
  .form_btn_b:hover {
-   color: #000;
-   border: 1px solid #000;
+   color: #0F1111;
+   border: 1px solid #0F1111;
    background-color: #fff;
  }
 

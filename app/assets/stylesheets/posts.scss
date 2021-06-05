@@ -22,13 +22,13 @@
 }
 
 .index_ul li:hover .post_index_tit {
-  color: #3eb370e3;
+  color: #3eb370;
 }
 
 .post_index_tit {
   font-weight: bold;
   font-size: 17px;
-  color: #000;
+  color: #0F1111;
   margin-bottom: 3px;
 }
 
@@ -92,7 +92,7 @@
 
 .comment_form {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .comment_form_label {
@@ -103,32 +103,52 @@
 }
 
 .comment_input_con {
-  width: 100%;
-  height: 300px;
+  width: 80%;
+  height: 200px;
   padding: 7px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   border: 1px solid #d8d8d8;
   border-radius: 6px;
 }
 
 .comment_input_con:focus {
-  border-color: #3eb370e3;
+  border-color: #3eb370;
   outline: none;
 }
 
-.comment_bottom {
-  padding-top: 25px;
-  text-align: center;
-}
-
-.comment_bottom a {
-  font-size: 16px;
+#evaluate_stars label {
   font-weight: bold;
 }
 
-.comment_bottom a:hover {
-  color: #3eb370e3;
+.comment_new_btn {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: #3eb370;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
 }
+
+.comment_new_btn:hover {
+  background-color: #fff;
+  color: #3eb370;
+  border: 2px solid #3eb370;
+}
+
+.comment_bottom {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.comment_bottom a {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.comment_bottom a:hover {
+  color: #3eb370;
+
+}
+
 /* posts_form */
 .post_new_inner {
   text-align: center;
@@ -143,32 +163,28 @@
 }
 
 .post_input_tit:focus {
-  border-color: #3eb370e3;
+  border-color: #3eb370;
   outline: none;
 }
 
 .post_input_con {
   width: 100%;
-  height: 500px;
   padding: 7px;
-  margin-bottom: 50px;
   border: 1px solid #d8d8d8;
   border-radius: 6px;
 }
 
 .post_input_con:focus {
-  border-color: #3eb370e3;
+  border-color: #3eb370;
   outline: none;
 }
 
-.comment_new_btn {
-  background-color: #3eb370e3;
-  transition-property: background-color, color;
-  transition-duration: 0.3s;
+.post_input_body {
+  margin-bottom: 30px;
+  height: 150px;
 }
 
-.comment_new_btn:hover {
-  background-color: #fff;
-  color: #3eb370e3;
-  border: 2px solid #3eb370e3;
+.post_input_exp {
+  margin-bottom: 50px;
+  height: 200px;
 }
