@@ -2,14 +2,14 @@
   <div class="post_show_inner post_inner">
     <h2 class="post_show_tit"><%= @post.title %></h2>
     <div class="post_info">
-      <div class="post_info_left">
+      <div class="post_info_avatar">
         <% if @post.user.avatar.attached? %>
           <%= image_tag @post.user.avatar, class: "user_avatar" %>
         <% else %>
           <%= image_tag "/user_images/default_icon.jpg", class: "user_avatar" %>
         <% end %>
       </div>
-      <div class="post_info_right">
+      <div class="post_info_text">
         <p><%= @post.user.name %></p>
         <p><%= @post.created_at.strftime("%Y-%m-%d %H:%M") %></p>
       </div>
@@ -35,19 +35,22 @@
     <ul class="comment_ul">
       <% @post.comments.each do |comment| %>
           <li>
-            <div class="post_info">
-              <div class="post_info_left">
+            <div class="comment_info">
+              <div class="comment_info_avatar">
                 <% if comment.user.avatar.attached? %>
                   <%= image_tag comment.user.avatar, class: "user_avatar" %>
                 <% else %>
                   <%= image_tag "/user_images/default_icon.jpg", class: "user_avatar" %>
                 <% end %>
               </div>
-              <div class="post_info_right">
-                <p><%= comment.user.name %></p>
-                <p><%= comment.created_at.strftime("%Y-%m-%d %H:%M") %></p>
+              <div class="comment_info_text">
+                <p class="comment-evaluation" data-score="<%= comment.evaluation %>"></p>
+                <div class="comment_info_bottom">
+                  <p><%= comment.user.name %></p>
+                  <p><%= comment.created_at.strftime("%Y-%m-%d %H:%M") %></p>
+                </div>
+
               </div>
-              <p class="comment-evaluation" data-score="<%= comment.evaluation %>"></p>
             </div>
             <p class="post_content">
               <%= safe_join(comment.content.split("\n"), tag(:br)) %>
