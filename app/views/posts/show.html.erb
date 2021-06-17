@@ -4,9 +4,9 @@
     <div class="post_info">
       <div class="post_info_avatar">
         <% if @post.user.avatar.attached? %>
-          <%= image_tag @post.user.avatar, class: "user_avatar" %>
+          <%= image_tag asset_path(@post.user.avatar, class: "user_avatar") %>
         <% else %>
-          <%= image_tag "/user_images/default_icon.jpg", class: "user_avatar" %>
+          <%= image_tag asset_path("/user_images/default_icon.jpg", class: "user_avatar") %>
         <% end %>
       </div>
       <div class="post_info_text">
@@ -38,9 +38,9 @@
             <div class="comment_info">
               <div class="comment_info_avatar">
                 <% if comment.user.avatar.attached? %>
-                  <%= image_tag comment.user.avatar, class: "user_avatar" %>
+                  <%= image_tag asset_path(comment.user.avatar, class: "user_avatar") %>
                 <% else %>
-                  <%= image_tag "/user_images/default_icon.jpg", class: "user_avatar" %>
+                  <%= image_tag asset_path("/user_images/default_icon.jpg", class: "user_avatar") %>
                 <% end %>
               </div>
               <div class="comment_info_text">
