@@ -15,14 +15,14 @@
   <body>
     <header class="header_wrapper">
       <div class="header_inner">
-        <div class="logo">
+        <div class="header_logo">
           <% if current_user %>
             <%= link_to current_user do %>
-            <%= image_tag asset_path("logo.png", class: 'header_logo') %>
+            <%= image_tag asset_path("logo.png") %>
           <% end %>
         <% else %>
             <%= link_to '/' do %>
-            <%= image_tag asset_path("logo.png", class: 'header_logo') %>
+            <%= image_tag asset_path("logo.png") %>
           <% end %>
         <% end %>
 
@@ -32,11 +32,14 @@
             <% if current_user %>
               <li><%= link_to('投稿一覧', posts_path) %></li>
               <li class="accoedion">
-                <% if current_user.avatar.attached? %>
-                  <%= image_tag asset_path(current_user.avatar, class: "header_avatar") %>
-                <% else %>
-                  <%= image_tag asset_path("/user_images/default_icon.jpg", class: "header_avatar") %>
-                <% end %>
+                <div class="header_avatar">
+                  <% if current_user.avatar.attached? %>
+                    <%= image_tag (current_user.avatar) %>
+                  <% else %>
+                    <%= image_tag ("/user_images/default_icon.jpg") %>
+                  <% end %>
+                </div>
+
                 <div class="accordion_cont">
                   <ul>
                     <li><%= link_to(current_user.name, current_user) %></li>
@@ -71,7 +74,10 @@
     <% end %>
     <%= yield %>
     <footer class="footer_wrapper">
-      <%= image_tag asset_path("logo.png", class: 'footer_logo') %>
+      <div class="footer_logo">
+        <%= image_tag asset_path("logo.png") %>
+      </div>
+
     </footer>
 
   </body>

@@ -1,9 +1,9 @@
 <div class="user_wrapper cont">
   <div class="user_inner post_inner">
     <% if @user.avatar.attached? %>
-      <%= image_tag asset_path(@user.avatar, class: "user_avatar") %>
+      <%= image_tag(@user.avatar) %>
     <% else %>
-      <%= image_tag asset_path("/user_images/default_icon.jpg", class: "user_avatar") %>
+      <%= image_tag asset_path("/user_images/default_icon.jpg") %>
     <% end %>
     <h2><%= @user.name %></h2>
     <div class="user_bottom">
