@@ -1,24 +1,11 @@
-# README
+# kotohano
+**「日本語って難しい」を減らす、言葉のレビューサイト**がコンセプトです。<br>
+不特定多数が読む文章を、事前にユーザーにチェックしてもらえるサービスです。<br>
+誤字脱字、不適切な表現の有無や読んだ印象などをコメントしてもらえます。
+# 作成した背景
+問題提起、現状分析
+# 使い方
+画像を挿入したりする
+# 技術
+railsなど羅列
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
