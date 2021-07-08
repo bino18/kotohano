@@ -2,11 +2,11 @@
   <div class="post_show_inner post_inner">
     <h2 class="post_show_tit"><%= @post.title %></h2>
     <div class="post_info">
-      <div class="post_info_avatar">
+      <div class="user_avatar">
         <% if @post.user.avatar.attached? %>
-          <%= image_tag asset_path(@post.user.avatar, class: "user_avatar") %>
+          <%= image_tag (@post.user.avatar) %>
         <% else %>
-          <%= image_tag asset_path("/user_images/default_icon.jpg", class: "user_avatar") %>
+          <%= image_tag asset_path ("/user_images/default_icon.jpg") %>
         <% end %>
       </div>
       <div class="post_info_text">
@@ -36,9 +36,9 @@
       <% @post.comments.each do |comment| %>
           <li>
             <div class="comment_info">
-              <div class="comment_info_avatar">
+              <div class="user_avatar">
                 <% if comment.user.avatar.attached? %>
-                  <%= image_tag asset_path(comment.user.avatar, class: "user_avatar") %>
+                  <%= image_tag (comment.user.avatar) %>
                 <% else %>
                   <%= image_tag asset_path("/user_images/default_icon.jpg", class: "user_avatar") %>
                 <% end %>
