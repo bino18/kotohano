@@ -3,12 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* top */
 .top_wrapper {
-  min-height: 90vh;
+  background-color: #3eb370;
   margin-left: auto;
   margin-right: auto;
-  color: #0F1111;
-  display: flex;
+  color: #fff;
   margin-bottom: 50px;
+<<<<<<< HEAD
   padding-left: 5%;
   padding-right: 5%;
   border-bottom: 1px solid #d8d8d8;
@@ -33,58 +33,70 @@
 .top_logo img{
   width: 250px;
   margin-top: 150px;
+=======
 }
 
-.top_subtitle {
-  color: #0F1111;
-  font-size: 30px;
-  padding-top: 20px;
-  border-bottom: 2px solid #3eb370;
+.top_inner {
+  max-width: 1100px;
+  height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(mockuper.png);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: right;
+  
+  
+>>>>>>> testbranch
+}
+
+.top_title {
+  padding-top: 200px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 35px;
 }
 
 .top_about {
-  font-size: 17px;
-  padding-top: 10px;
+  font-size: 20px;
+  margin-bottom: 35px;
 }
 
 .top_btns {
-  margin-top: 50px;
+}
+
+.top_btns a {
+  margin-right: 5px;
+  color: #fff;
+  font-weight: bold;
 }
 
 .top_btn {
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 10px;
-  outline: none;
-  width: 200px;
+  width: 180px;
   height: 60px;
-  font-size: 17px;
-  color: #fff !important;
   border-radius: 5px;
   transition-property: background-color, color;
   transition-duration: 0.3s;
 }
 
-.top_btn:hover {
-  background-color: #fff;
-}
-
 .top_btn_a {
-  margin-top: 5px;
-  background-color: #3eb370
+  margin-top: 10px;
+  background-color: #2e3740;
 }
 
 .top_btn_a:hover {
-  color: #3eb370 !important;
-  border: 1px solid #3eb370;
+  color: #2e3740;
+  border: 2px solid #2e3740;
+  background-color: #fff;
 }
 
 .top_btn_b {
-  margin-top: 5px;
-  background-color: #0F1111;
+  margin-top: 10px;
+  border: 2px solid #fff;
 }
 
 .top_btn_b:hover {
-  color: #0F1111 !important;
-  border: 1px solid #0F1111;
+  color: #3eb370;
+  background-color: #fff;
+  border: 2px solid #f3eb370ff;
 }

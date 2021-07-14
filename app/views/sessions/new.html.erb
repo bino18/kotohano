@@ -1,5 +1,8 @@
 <div class="login_wrapper cont">
-  <h1>kotohano</h1>
+  <div class="login_logo">
+    <%= image_tag "logo.png", class: 'footer_logo' %>
+  </div>
+  
   <div class="login_inner">
     <p>kotohanoにログイン</p>
     <%= form_with scope: :session, local: true do |form|%>

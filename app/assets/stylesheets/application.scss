@@ -15,9 +15,11 @@
  */
 /* color
 #0F1111 黒
+#2e3740 青黒
 #d8d8d8 グレー
 #f8f8f8 ライトグレー
 #3eb370 緑
+#a6cfe9　水色
  */
 
 @import "reset";
@@ -52,7 +54,7 @@
 
  a {
    text-decoration: none;
-   color: #0F1111;
+   color: #2e3740;
    font-size: 14px;
  }
 
@@ -69,12 +71,12 @@
 
  .cont {
    max-width: 1260px;
-   min-height: 90vh;
+   height: 90vh;
    margin-left: auto;
    margin-right: auto;
    padding-left: 5%;
    padding-right: 5%;
-   color: #0F1111;
+   color: #2e3740;
  }
 
  .inner {
@@ -119,12 +121,12 @@
 
  .form_btn_b {
    margin-top: 10px;
-   background-color: #0F1111;
+   background-color: #2e3740;
  }
 
  .form_btn_b:hover {
-   color: #0F1111;
-   border: 1px solid #0F1111;
+   color: #2e3740;
+   border: 1px solid #2e3740;
    background-color: #fff;
  }
 
@@ -137,11 +139,10 @@
  /* header */
  .header_wrapper {
    background-color: #fff;
-   border-bottom: 1px solid #d8d8d8;
  }
 
  .header_inner {
-   max-width: 1400px;
+   max-width: 1260px;
    height: 65px;
    margin-left: auto;
    margin-right: auto;
@@ -152,8 +153,13 @@
    align-items: center;
  }
 
+<<<<<<< HEAD
  .header_logo img {
    width: 80px;
+=======
+ .header_logo {
+   width: 90px;
+>>>>>>> testbranch
    margin-top: 5px;
  }
 
@@ -175,6 +181,7 @@
    display: block;
    padding: 8px;
    height: 100%;
+
  }
 
  .header_new_btn {
@@ -253,26 +260,22 @@
   /* top */
   .top_wrapper {
     display: block;
-    min-height: initial;
+    
     margin-bottom: 50px;
-  }
-
-  .top_image {
-    display: none;
+    
   }
 
   .top_inner {
-    width: 100%;
-    text-align: center;
-
+    height: 50vh;
+    background-size: cover;
   }
 
   .top_title {
     padding-top: 0px;
   }
 
-  .about_wrapper {
-    text-align: center;
+  .cont {
+    height: 50vh;
   }
 
 }
@@ -283,11 +286,10 @@
   }
 
   /* top */
-  .about_boxies {
-    display: block;
+  .top_inner {
   }
 
-  .about_box {
+  .top_box {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
