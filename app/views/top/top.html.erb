@@ -1,24 +1,33 @@
 <div class="top_wrapper">
   <div class="top_inner">
-    <%= image_tag "logo.png", class: 'top_logo' %>
-    <h1 class="top_subtitle">「日本語ってむずかしい」をゼロに</h1>
-    <p class="top_about">kotohanoはあなたが書いた文章をユーザーがチェックし、<br>より良いものにする言葉のレビューサイトです。</p>
-    <div class="top_btns">
-      <%= link_to(login_path) do %>
-        <button type="button" name="button" class="top_btn_a top_btn">
-          ログインする
-        </button>
-      <% end %>
+    <div class="top_box">
+      <h1 class="top_title">
+      「日本語ってむずかしい」を<br>ゼロに
+      </h1>
+      <p class="top_about">
+      あなたが書いた文章をユーザーがチェックし、<br>より良いものにする言葉のレビューサイトです。
+      </p>
+      <div class="top_btns">
+      
       <%= link_to(new_user_path) do %>
-        <button type="button" name="button" class="top_btn_b top_btn">
+        <button type="button" name="button" class="top_btn_a top_btn">
           新規登録する
         </button>
       <% end %>
+      <%= link_to(login_path) do %>
+        <button type="button" name="button" class="top_btn_b
+         top_btn">
+          ログインする
+        </button>
+      <% end %>
     </div>
+    </div>
+    
+    
   </div>
-  <div class="top_image">
-    <%= image_tag "mockuper.png", class: 'mockup_img' %>
-  </div>
+</div>
+<div class="about_wrapper">
+
 </div>
 <div class="index_wrapper cont">
   <div class="post_inner index_inner">

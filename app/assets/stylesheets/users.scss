@@ -2,11 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* login_form */
-.login_wrapper h1 {
+.login_logo {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #3eb370;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 .login_inner {
@@ -21,7 +20,8 @@
 
 .login_inner p {
   font-size: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+  font-weight: bold;
 }
 
 .login_form {
@@ -33,7 +33,7 @@
 .login_input {
   width: 100%;
   padding: 7px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border: 1px solid #d8d8d8;
   border-radius: 6px;
 }
@@ -51,7 +51,7 @@
 }
 
 .signup_inner h1 {
-  color: #0F1111;
+  color: #2e3740;
   margin-bottom: 15px;
 }
 
