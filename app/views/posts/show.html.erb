@@ -96,9 +96,9 @@
   </div>
   <script>
     $('#evaluate_stars').raty({
-    starOn: "<%= asset_path('star-on.png') %>",
-    starOff: "<%= asset_path('star-off.png') %>",
-    starHalf: "<%= asset_path('star-half.png') %>",
+    starOn: "<%= image_tag asset_path('star-on.png') %>",
+    starOff: "<%= image_tag asset_path('star-off.png') %>",
+    starHalf: "<%= image_tag asset_path('star-half.png') %>",
     scoreName: 'comment[evaluation]'
     });
   </script>
