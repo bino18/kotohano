@@ -30,7 +30,7 @@
         <nav class="header_nav">
           <ul class="header_menus">
             <% if current_user %>
-              <li><%= link_to('投稿一覧', posts_path) %></li>
+              
               <li class="accoedion">
                 <div class="header_avatar">
                   <% if current_user.avatar.attached? %>
@@ -43,6 +43,7 @@
                 <div class="accordion_cont">
                   <ul>
                     <li><%= link_to(current_user.name, current_user) %></li>
+                    <li><%= link_to('投稿一覧', posts_path) %></li>
                     <li><%= link_to('ログアウト', logout_path, method: :delete) %></li>
                   </ul>
                 </div>

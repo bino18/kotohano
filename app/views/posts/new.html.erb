@@ -3,14 +3,14 @@
     <%= form_with model: @post, local: true do |form|%>
       <div class="post_form">
         <%= form.label :title,  "タイトル", class: 'form_label' %>
-        <%= form.text_field :title, class: 'post_input_tit', placeholder: '簡潔にな！' %>
+        <%= form.text_field :title, class: 'post_input_tit', placeholder: 'どういう言葉をチェックしてほしいか入力してください' %>
       </div>
       <div class="post_form">
         <%= form.label :body, "文章", class: 'form_label' %>
-        <%= form.text_area :body, class: 'post_input_con post_input_body', placeholder: 'チェックしてほしい文章を入力してください' %>
+        <%= form.text_area :body, class: 'post_input_con post_input_body', placeholder: 'チェックしてほしい言葉を入力してください' %>
       </div>
       <div class="post_form">
-        <%= form.label :explanation,  "文章についての説明", class: 'form_label' %>
+        <%= form.label :explanation,  "この言葉について", class: 'form_label' %>
         <%= form.text_area :explanation, class: 'post_input_con post_input_exp', placeholder: '誰が読むのか、どこに載せるのか、チェックしてほしいポイントなど' %>
       </div>
 

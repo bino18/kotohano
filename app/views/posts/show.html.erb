@@ -14,12 +14,23 @@
         <p><%= @post.created_at.strftime("%Y-%m-%d %H:%M") %></p>
       </div>
     </div>
-    <p class="post_content">
+    <div class="post_content">
+      <div class="post_show_body">
+      <h3>評価してほしい言葉</h3>
+      <p>
       <%= safe_join(@post.body.split("\n"), tag(:br)) %>
     </p>
-    <p class="post_content">
+    </div>
+    <div class="post_show_exp">
+      <h3>この言葉について</h3>
+      <p>
       <%= safe_join(@post.explanation.split("\n"), tag(:br)) %>
     </p>
+    </div>
+    </div>
+    
+    
+    
     <% if current_user %>
       <% if @post.user_id == current_user.id %>
         <div class="post_bottom">
@@ -79,13 +90,20 @@
     <div class="comment_form">
       <%= form_with(model: [@post, @comment], local: true) do |form|%>
         <div class="post_form">
+          
           <%= form.label :content, "コメントを投稿する", class: 'comment_form_label' %>
+          
           <%= form.text_area :content, class: 'comment_input_con' %>
         </div>
-        <div id="evaluate_stars">
+        <div class="comment_form_bottom">
+          <div id="evaluate_stars">
+        <!--
           <label>評価</label>
+        -->
         </div>
-        <%= form.submit "投稿する", class: 'comment_new_btn form_btn' %>
+        <%= form.submit "投稿", class: 'comment_new_btn' %>
+        </div>
+        
       <% end %>
     </div>
     <% else %>
