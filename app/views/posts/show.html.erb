@@ -1,4 +1,4 @@
-<div class="post_wrapper">
+<div class="post_wrapper cont">
   <div class="post_show_inner post_inner">
     <h2 class="post_show_tit"><%= @post.title %></h2>
     <div class="post_info">
@@ -14,14 +14,14 @@
         <p><%= @post.created_at.strftime("%Y-%m-%d %H:%M") %></p>
       </div>
     </div>
-    <div class="post_content">
-      <div class="post_show_body">
+    <div class="post_contents">
+      <div class="post_show_body post_contents">
       <h3>評価してほしい言葉</h3>
       <p>
       <%= safe_join(@post.body.split("\n"), tag(:br)) %>
     </p>
     </div>
-    <div class="post_show_exp">
+    <div class="post_show_exp post_contents">
       <h3>この言葉について</h3>
       <p>
       <%= safe_join(@post.explanation.split("\n"), tag(:br)) %>

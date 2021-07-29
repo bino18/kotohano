@@ -42,6 +42,7 @@
 
                 <div class="accordion_cont">
                   <ul>
+                    <li><%= link_to('投稿', new_post_path, class: 'accordion_new_btn') %></li>
                     <li><%= link_to(current_user.name, current_user) %></li>
                     <li><%= link_to('投稿一覧', posts_path) %></li>
                     <li><%= link_to('ログアウト', logout_path, method: :delete) %></li>

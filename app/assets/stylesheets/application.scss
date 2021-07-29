@@ -233,6 +233,10 @@
    height: auto;
 }
 
+.accordion_new_btn {
+  display: none !important;
+}
+
 
 
  /* footer */
@@ -281,7 +285,22 @@
 
 @media (max-width: 600px) {
   .cont {
-    max-width: 500px;
+    max-width: 100%;
+    padding: 1%;
+  }
+
+  /* header */
+  .header_new_btn {
+    display: none !important;
+  }
+
+  .accordion_cont {
+    right: 5%;
+    width: 200px;
+  }
+
+  .accordion_new_btn {
+    display: inline-block !important;
   }
 
   /* top */
@@ -297,7 +316,16 @@
 
   /* post */
   .post_input_con {
-    height: 300px;
+    height: 200px;
+  }
+
+  .post_contents h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  .post_contents {
+    padding-bottom: 40px;
   }
 
   /* user */
