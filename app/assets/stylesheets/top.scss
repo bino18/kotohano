@@ -3,31 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* top */
 .top_wrapper {
-  background-color: #fff;
+  background: rgb(62,179,112);
+  background: linear-gradient(90deg, rgba(62,179,112,1) 26%, rgba(75,200,168,1) 100%);
   margin-left: auto;
   margin-right: auto;
-  color: #2e3740;
+  color: #fafafa;
   margin-bottom: 50px;
 }
 
 .top_inner {
   max-width: 1100px;
-  height: 90vh;
+  min-height: 90vh;
   margin-left: auto;
   margin-right: auto;
   background-image: image-url("mockuper.png");
   background-repeat: no-repeat;
   background-size: 60%;
-  background-position: center;
+  background-position: right;
   
 }
 
 .top_box {
-  text-align: center;
+  padding-top: 200px;
+  text-align: left;
 }
 
 .top_title {
-  padding-top: 20px;
   margin-bottom: 15px;
   font-weight: bold;
   font-size: 30px;
@@ -39,12 +40,13 @@
 }
 
 .top_btns {
+  
 }
 
 .top_btns a {
   margin-right: 5px;
-  color: #fff;
   font-weight: bold;
+  color: #fafafa;
 }
 
 .top_btn {
@@ -62,17 +64,15 @@
 
 .top_btn_a:hover {
   color: #2e3740;
-  background-color: #fff;
+  background-color: #fafafa;
 }
 
 .top_btn_b {
   margin-top: 10px;
-  border: 2px solid #fff;
-  background-color: #3eb370;
+  border: 2px solid #fafafa;
 }
 
 .top_btn_b:hover {
   color: #3eb370;
-  background-color: #fff;
-  border: 2px solid #f3eb370ff;
+  background-color: #fafafa;
 }
