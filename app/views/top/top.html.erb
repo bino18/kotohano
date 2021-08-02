@@ -8,18 +8,31 @@
       あなたが書いた文章をユーザーがチェックし、<br>より良いものにする言葉のレビューサイトです。
       </p>
       <div class="top_btns">
-      
-      <%= link_to(new_user_path) do %>
-        <button type="button" name="button" class="top_btn_a top_btn">
-          新規登録する
-        </button>
-      <% end %>
-      <%= link_to(login_path) do %>
-        <button type="button" name="button" class="top_btn_b
-         top_btn">
-          ログインする
-        </button>
-      <% end %>
+        <% if current_user %>
+          <%= link_to(new_post_path) do %>
+            <button type="button" name="button" class="top_btn_a top_btn">
+              投稿する
+            </button>
+          <% end %>
+          <%= link_to(posts_path) do %>
+            <button type="button" name="button" class="top_btn_b
+            top_btn">
+              投稿を見る
+            </button>
+          <% end %>
+        <% else %>
+            <%= link_to(new_user_path) do %>
+            <button type="button" name="button" class="top_btn_a top_btn">
+              新規登録する
+            </button>
+          <% end %>
+          <%= link_to(login_path) do %>
+            <button type="button" name="button" class="top_btn_b
+            top_btn">
+              ログインする
+            </button>
+          <% end %>
+         <% end %>
     </div>
     </div>
     

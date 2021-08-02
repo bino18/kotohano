@@ -18,10 +18,11 @@
 #0F1111 黒
 #2e3740 青黒
 #d8d8d8 グレー
-#f8f8f8 ライトグレー
-#3eb370 緑
-#a6cfe9　水色
- */
+#f3f3f3 ライトグレー
+#05a77b 緑
+#007d95 青緑
+#ffbe1f イエロー
+  */
 
 @import "reset";
 
@@ -39,7 +40,7 @@
    line-height: 1.7;
    letter-spacing: 1px;
    height: 100%;
-   background-color: #f8f8f8;
+   background-color: #f3f3f3;
    color: #2e3740;
    font-family: "Helvetica Neue",
     Arial,
@@ -71,8 +72,8 @@
 
  .flash {
    color: #fafafa;
-   background: rgb(62,179,112);
-background: linear-gradient(90deg, rgba(62,179,112,1) 26%, rgba(75,200,168,1) 100%);
+   background: rgb(5,167,123);
+    background: linear-gradient(90deg, rgba(5,167,123,1) 28%, rgba(0,125,149,1) 100%);
    text-align: center;
    padding: 5px;
  }
@@ -117,12 +118,12 @@ background: linear-gradient(90deg, rgba(62,179,112,1) 26%, rgba(75,200,168,1) 10
 
  .form_btn_a {
    margin-top: 5px;
-   background-color: #3eb370;
+   background-color: #05a77b;
  }
 
  .form_btn_a:hover {
-   color: #3eb370;
-   border: 1px solid #3eb370;
+   color: #05a77b;
+   border: 1px solid #05a77b;
    background-color: #fafafa;
  }
 
@@ -146,6 +147,7 @@ background: linear-gradient(90deg, rgba(62,179,112,1) 26%, rgba(75,200,168,1) 10
  /* header */
  .header_wrapper {
    background-color: #fafafa;
+   border-bottom: 1px solid #d8d8d8;
  }
 
  .header_inner {
@@ -187,7 +189,7 @@ background: linear-gradient(90deg, rgba(62,179,112,1) 26%, rgba(75,200,168,1) 10
  }
 
  .header_new_btn {
-   background-color: #3eb370;
+   background-color: #05a77b;
    color: #fafafa;
    border-radius: 5px;
    width: 70px;
