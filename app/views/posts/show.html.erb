@@ -62,6 +62,17 @@
                 </div>
 
               </div>
+              <script>
+          $('.comment-evaluation').raty({
+            size: 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            half: true,
+            readOnly: true,
+            score: <%= comment.evaluation %>,
+          });
+          </script>  
             </div>
             <p class="post_content">
               <%= safe_join(comment.content.split("\n"), tag(:br)) %>
@@ -76,15 +87,8 @@
           </li>
       <% end %>
     </ul>
-    <script>
-      $('.comment-evaluation').raty({
-        readOnly: true,
-        score: function() {
-          return $(this).attr('data-score');
-        },
-        path: '/assets/'
-      });
-    </script>
+    
+     
     <% end %>
     <% if current_user %>
     <div class="comment_form">
@@ -120,4 +124,5 @@
     scoreName: 'comment[evaluation]'
     });
   </script>
+  
 </div>
