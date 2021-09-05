@@ -1,11 +1,11 @@
-<div class="index_wrapper cont">
-  <div class="post_inner index_inner">
+<div class="post_wrapper index_wrapper">
+  <div class="post_inner">
     <ul class="index_ul">
       <% @posts.each do |post| %>
         <%= link_to(post_path(post)) do %>
           <li>
             <p class="post_index_tit"><%= post.title %></p>
-            <p class="post_index_info"><%= post.user.name %></p>
+            <p class="post_index_body"><%= post.body[0, 40] %></p>
           </li>
         <% end %>
       <% end %>

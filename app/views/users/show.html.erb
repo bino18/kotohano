@@ -1,6 +1,5 @@
 <div class="user_wrapper cont">
-  <div class="user_inner post_inner">
-  
+  <div class="post_inner user_inner">
     <% if @user.avatar.attached? %>
       <%= image_tag(@user.avatar) %>
     <% else %>
@@ -18,7 +17,7 @@
         <%= link_to(post_path(post)) do %>
           <li>
             <p class="post_index_tit"><%= post.title %></p>
-            <p class="post_index_info"><%= post.user.name %></p>
+            <p class="post_index_body"><%= post.body[0, 40] %></p>
           </li>
         <% end %>
       <% end %>

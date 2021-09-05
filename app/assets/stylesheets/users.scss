@@ -2,30 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* login_form */
-.login_logo {
-  text-align: center;
-}
-
-.login_logo img{
-  width: 200px;
-  margin-top: 50px;
-  margin-bottom: 25px;
+.login_wrapper {
+  min-height: 80vh;
 }
 
 .login_inner {
+  padding: 2%;
   background-color: #fafafa;
-  padding: 3%;
+  border: 1px solid #d8d8d8;
   width: 400px;
   text-align: center;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #d8d8d8;
 }
 
-.login_inner p {
+.login_title {
+  margin-bottom: 30px;
   font-size: 1.25rem;
-  padding-bottom: 20px;
-  font-weight: bold;
+  text-align: left;
 }
 
 .login_form {
@@ -39,44 +34,33 @@
   padding: 7px;
   margin-bottom: 25px;
   border: 1px solid #d8d8d8;
-  border-radius: 6px;
 }
 
 .login_input:focus {
-  border-color: #05a77b;
+  border-color: #009944;
   outline: none;
 }
 
-/* signup_form */
-.signup_inner {
-  width: 400px;
-  margin-top: 50px;
-  text-align: center;
+.login_form_btn {
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  margin-top: 10px;
+  background-color: #009944;
 }
 
-.signup_inner h1 {
-  color: #2e3740;
-  margin-bottom: 15px;
+.login_form_btn:hover {
+  background-color: #2e3740;
 }
 
-.signup_form {
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+.signin_form_btn {
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  margin-top: 5px;
+  background-color: #007d95;
 }
 
-.signup_input {
-  width: 100%;
-  padding: 7px;
-  margin-bottom: 20px;
-  background-color: #fafafa;
-  border: 1px solid #d8d8d8;
-  border-radius: 6px;
-}
-
-.signup_input:focus {
-  border-color: #05a77b;
-  outline: none;
+.signin_form_btn:hover {
+  background-color: #2e3740;
 }
 
 /* user_show */

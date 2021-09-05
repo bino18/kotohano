@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* post_index */
+.post_wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.index_wrapper {
+  max-width: 1290px;
+  min-height: 90vh;
+}
+
 .post_inner {
   max-width: 800px;
   background-color: #fafafa;
@@ -12,32 +22,29 @@
   margin-right: auto;
 }
 
+.index_ul {
+}
+
 .index_ul li {
-  padding: 12px 7px;
+  padding: 10px 5px;
   border-bottom: 1px solid #d8d8d8;
 }
 
-.index_ul li:hover {
-  background-color: #f8f8f8;
-}
-
-.index_ul li:hover .post_index_tit {
-  color: #05a77b;
-}
-
 .post_index_tit {
+  font-size: 1rem;
+  padding: 3px;
   font-weight: bold;
-  font-size: 1.125rem;
-  color: #2e3740;
-  margin-bottom: 3px;
 }
 
-.post_index_info {
-  display: flex;
-}
-
-.post_index_info {
+.post_index_body {
   color: #787878;
+  font-size: 0.875rem;
+  padding: 6px;
+  border-left: 4px solid #d8d8d8;
+}
+
+.index_ul li:hover {
+  background-color: #f3f3f3;
 }
 
 .mb-3 {
@@ -46,6 +53,7 @@
 }
 
 /* post_show */
+
 .post_show_tit {
   padding-bottom: 5px;
   border-bottom: 1px solid #d8d8d8;
@@ -136,7 +144,7 @@
 }
 
 .comment_input_con:focus {
-  border-color: #05a77b;
+  border-color: #009944;
   outline: none;
 }
 
@@ -160,7 +168,7 @@
   height: 40px;
   font-size: 1rem;
   color: #fafafa !important;
-  background-color: #05a77b;
+  background-color: #009944;
 }
 
 
@@ -175,7 +183,7 @@
 }
 
 .comment_bottom a:hover {
-  color: #05a77b;
+  color: #009944;
 
 }
 
@@ -202,7 +210,7 @@
 }
 
 .post_input_tit:focus {
-  border-color: #05a77b;
+  border-color: #009944;
   outline: none;
 }
 
@@ -214,7 +222,7 @@
 }
 
 .post_input_con:focus {
-  border-color: #05a77b;
+  border-color: #009944;
   outline: none;
 }
 

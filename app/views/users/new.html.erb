@@ -1,24 +1,27 @@
-<div class="signup_wrapper cont">
-  <div class="signup_inner inner">
-    <h1>新しいアカウントを作成</h1>
+<div class="login_wrapper">
+  <div class="login_inner">
+    <div class="login_title">
+      <p>新しいアカウントを作成</p>
+    </div>
     <%= form_with model: @user, local: true do |form|%>
-        <div class="signup_form">
-          <%= form.label :name,  "名前", class: 'form_label' %>
-          <%= form.text_field :name, class: 'signup_input' %>
-        </div>
-        <div class="signup_form">
-          <%= form.label :email,  "メールアドレス", class: 'form_label' %>
-          <%= form.text_field :email, class: 'signup_input' %>
-        </div>
-        <div class="signup_form">
-          <%= form.label :password,  "パスワード", class: 'form_label' %>
-          <%= form.password_field :password, class: 'signup_input' %>
-        </div>
-        <div class="signup_form">
-          <%= form.label :password_confirmation,  "パスワード(確認)", class: 'form_label' %>
-          <%= form.password_field :password_confirmation, class: 'signup_input' %>
-        </div>
-      <%= form.submit "登録する", class: 'form_btn_b form_btn' %>
+      <div class="login_form">
+        <%= form.label :name,  "名前", class: 'form_label' %>
+        <%= form.text_field :name, class: 'login_input' %>
+      </div>
+      <div class="login_form">
+        <%= form.label :email,  "メールアドレス", class: 'form_label' %>
+        <%= form.text_field :email, class: 'login_input' %>
+      </div>
+      <div class="login_form">
+        <%= form.label :password,  "パスワード", class: 'form_label' %>
+        <%= form.password_field :password, class: 'login_input' %>
+      </div>
+      <div class="login_form">
+        <%= form.label :password_confirmation,  "パスワード(確認)", class: 'form_label' %>
+        <%= form.password_field :password_confirmation, class: 'login_input' %>
+      </div>
+      <%= form.submit "登録する", class: 'form_btn login_form_btn' %>
     <% end %>
   </div>
 </div>
+

@@ -5,31 +5,19 @@
       「日本語ってむずかしい」をゼロに
       </h1>
       <p class="top_about">
-      あなたが書いた文章をより良いものにする<br>言葉のレビューサイトです。
+      あなたが書いた文章をより良いものになる<br>言葉のレビューサイトです。
       </p>
       <div class="top_btns">
         <% if current_user %>
           <%= link_to(new_post_path) do %>
-            <button type="button" name="button" class="top_btn_a top_btn">
-              投稿する
-            </button>
-          <% end %>
-          <%= link_to(posts_path) do %>
-            <button type="button" name="button" class="top_btn_b
-            top_btn">
-              投稿を見る
+            <button type="button" name="button" class="top_btn">
+              文章を投稿する
             </button>
           <% end %>
         <% else %>
-            <%= link_to(new_user_path) do %>
-            <button type="button" name="button" class="top_btn_a top_btn">
-              新規登録する
-            </button>
-          <% end %>
           <%= link_to(login_path) do %>
-            <button type="button" name="button" class="top_btn_b
-            top_btn">
-              ログインする
+            <button type="button" name="button" class="top_btn">
+              ログインして投稿する
             </button>
           <% end %>
          <% end %>
@@ -39,14 +27,14 @@
     
   </div>
 </div>
-<div class="index_wrapper cont">
-  <div class="post_inner index_inner">
+<div class="post_wrapper">
+  <div class="post_inner">
     <ul class="index_ul">
       <% @posts.each do |post| %>
         <%= link_to(post_path(post)) do %>
           <li>
             <p class="post_index_tit"><%= post.title %></p>
-            <p class="post_index_info"><%= post.user.name %></p>
+            <p class="post_index_body"><%= post.body[0, 40] %></p>
           </li>
         <% end %>
       <% end %>

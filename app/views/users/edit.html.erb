@@ -1,23 +1,25 @@
-<div class="signup_wrapper cont">
-  <div class="signup_inner inner">
-    <h1>アカウント情報を編集</h1>
+<div class="login_wrapper cont">
+  <div class="login_inner inner">
+    <div class="login_title">
+      <p>アカウント情報を編集</p>
+    </div>
     <%= form_with(model: @user, local: true, multipart: true) do |form|%>
-        <div class="signup_form">
+        <div class="login_form">
           <%= form.label :image,  "アイコン画像", class: 'form_label' %>
-          <%= form.file_field :avatar, class: 'signup_input' %>
+          <%= form.file_field :avatar, class: 'login_input' %>
           <% if @user.avatar.attached? %>
             <%= @user.avatar.purge %>
           <% end %>
         </div>
-        <div class="signup_form">
+        <div class="login_form">
           <%= form.label :name,  "名前", class: 'form_label' %>
-          <%= form.text_field :name, class: 'signup_input' %>
+          <%= form.text_field :name, class: 'login_input' %>
         </div>
-        <div class="signup_form">
+        <div class="login_form">
           <%= form.label :email,  "メールアドレス", class: 'form_label' %>
-          <%= form.text_field :email, class: 'signup_input' %>
+          <%= form.text_field :email, class: 'login_input' %>
         </div>
-      <%= form.submit "更新する", class: 'form_btn_a form_btn' %>
+      <%= form.submit "更新する", class: 'form_btn login_form_btn' %>
     <% end %>
   </div>
 </div>

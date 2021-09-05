@@ -1,10 +1,8 @@
-<div class="login_wrapper cont">
-  <div class="login_logo">
-    <%= image_tag "logo.png" %>
-  </div>
-  
+<div class="login_wrapper">
   <div class="login_inner">
-    <p>kotohanoにログイン</p>
+    <div class="login_title">
+      <p>kotohanoにログイン</p>
+    </div>
     <%= form_with scope: :session, local: true do |form|%>
       <div class="login_form">
         <%= form.label :email,  "メールアドレス", class: 'form_label' %>
@@ -14,10 +12,10 @@
         <%= form.label :password,  "パスワード", class: 'form_label' %>
         <%= form.password_field :password, class: 'login_input' %>
       </div>
-      <%= form.submit "ログインする", class: 'form_btn_a form_btn' %>
+      <%= form.submit "ログインする", class: 'form_btn login_form_btn' %>
     <% end %>
     <%= link_to(new_user_path) do %>
-      <button type="button" name="button" class="form_btn_b form_btn">
+      <button type="button" name="button" class="form_btn  signin_form_btn">
         新しいアカウントを作成する
       </button>
     <% end %>
