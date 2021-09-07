@@ -19,7 +19,7 @@
 #2e3740 青黒
 #d8d8d8 グレー
 #f3f3f3 ライトグレー
-#009944 緑
+#05a77b 緑
 #007d95 青緑
 #ffbe1f イエロー
   */
@@ -62,7 +62,7 @@
 
  a {
    text-decoration: none;
-   color: #009944;
+   color: #05a77b;
    font-size: 0.875rem;
  }
 
@@ -102,8 +102,8 @@
 
  /* header */
  .header_wrapper {
-  background-color: #fafafa;
-   border-bottom: 1px solid #d8d8d8;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8d8d8;
  }
 
  .header_inner {
@@ -145,7 +145,7 @@
  }
 
  .header_new_btn {
-   background-color: #009944;
+   background-color: #05a77b;
    color: #fafafa;
    border-radius: 5px;
    width: 75px;

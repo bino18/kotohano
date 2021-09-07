@@ -16,6 +16,19 @@
       <% @user.posts.each do |post| %>
         <%= link_to(post_path(post)) do %>
           <li>
+            <div class="index_info">
+              <div class="user_index_avatar">
+              <% if post.user.avatar.attached? %>
+                <%= image_tag (post.user.avatar) %>
+              <% else %>
+                <%= image_tag asset_path ("/user_images/default_icon.jpg") %>
+              <% end %>
+              </div>
+              <p>
+              <%= post.user.name %>が
+              <%= post.created_at.strftime("%Y-%m-%d %H:%M") %>に投稿
+              </p>
+            </div>
             <p class="post_index_tit"><%= post.title %></p>
             <p class="post_index_body"><%= post.body[0, 40] %></p>
           </li>
