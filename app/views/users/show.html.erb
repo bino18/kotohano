@@ -1,16 +1,28 @@
-<div class="user_wrapper cont">
-  <div class="post_inner user_inner">
-    <% if @user.avatar.attached? %>
-      <%= image_tag(@user.avatar) %>
-    <% else %>
-      <%= image_tag asset_path("/user_images/default_icon.jpg") %>
-    <% end %>
-    <h2><%= @user.name %></h2>
-    <div class="user_bottom">
-      <%= link_to('編集', edit_user_path) %>
-      <%= link_to('削除', @user, method: :delete) %>
+<div class="user_wrapper">
+  <div class="user_inner post_inner">
+    <div class="user_show_box">
+      <div class="user_show_avator">
+        <% if @user.avatar.attached? %>
+        <%= image_tag(@user.avatar) %>
+        <% else %>
+        <%= image_tag asset_path("/user_images/default_icon.jpg") %>
+        <% end %>
+      </div>
+      <div class="user_show_info">
+        <h2><%= @user.name %></h2>
+        <p>投稿した数 <%= @user.posts.length %>件</p>
+      </div>
     </div>
+    <div class="user_show_bottom">
+      <%= link_to(edit_user_path) do %>
+        <button type="button" name="button" class="user_show_btn">
+              プロフィールを編集する
+        </button>
+      <% end %>
+    </div>
+    
   </div>
+</div>
   <div class="post_inner user_index_inner">
     <ul class="index_ul">
       <% @user.posts.each do |post| %>
@@ -36,4 +48,3 @@
       <% end %>
     </ul>
   </div>
-</div>

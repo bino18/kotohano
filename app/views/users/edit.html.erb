@@ -20,6 +20,10 @@
           <%= form.text_field :email, class: 'login_input' %>
         </div>
       <%= form.submit "更新する", class: 'form_btn login_form_btn' %>
+
+      
     <% end %>
+    <p><%= link_to('アカウントを削除する', @user, method: :delete) %></p>
   </div>
+  
 </div>
