@@ -215,7 +215,7 @@
 
 /* responsive */
 @media (max-width: 1024px) {
-  .cont {
+  .post_inner {
     min-height: 70vh;
   }
 
@@ -240,23 +240,16 @@
 
 @media (max-width: 599px) {
   .cont {
-    max-width: 100%;
-    padding: 1%;
-    min-height: 50vh;
+    
   }
 
   /* header */
   .header_new_btn {
-    display: none !important;
   }
 
   .accordion_cont {
     right: 5%;
-    width: 200px;
-  }
-
-  .accordion_new_btn {
-    display: inline-block !important;
+    width: 150px;
   }
 
   /* top */
@@ -291,6 +284,15 @@
   }
 
   /* post */
+  .post_inner {
+    max-width: 100%;
+    padding: 2%;
+  }
+
+  .index_inner {
+    min-height: 50vh;
+  }
+
   .post_input_con {
     height: 200px;
   }
@@ -305,7 +307,16 @@
   }
 
   /* user */
-  .user_inner {
+  .login_inner {
+    max-width: 100%;
+    padding: 2%;
+  }
+
+  .user_show_box {
+    justify-content: center;
+  }
+
+  .user_show_bottom {
     text-align: center;
   }
 }

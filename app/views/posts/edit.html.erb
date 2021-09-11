@@ -7,13 +7,14 @@
       </div>
       <div class="post_form">
         <%= form.label :body, "文章", class: 'form_label' %>
-        <%= form.text_area :body, class: 'post_input_con' %>
+        <%= form.text_area :body, class: 'post_input_con post_input_body' %>
       </div>
       <div class="post_form">
         <%= form.label :explanation,  "説明", class: 'form_label' %>
-        <%= form.text_area :explanation, class: 'post_input_con' %>
+        <%= form.text_area :explanation, class: 'post_input_con post_input_exp' %>
       </div>
-      <%= form.submit "追記する", class: 'form_btn_a form_btn' %>
+      <%= form.submit "更新する", class: 'form_btn post_new_btn' %>
     <% end %>
+    <p class="edit_destroy"><%= link_to('この投稿を削除する', @post, method: :delete) %></p>
   </div>
 </div>

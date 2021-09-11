@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :comment do
-    content { 'コメントテスト' }
+    content { 'コメントのテスト' }
+    evaluation {3}
     user
     post
   end
