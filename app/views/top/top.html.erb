@@ -1,12 +1,18 @@
 <div class="top_wrapper">
   <div class="top_inner">
+    <div class="top_image">
+      <%= image_tag asset_path ("books.jpg") %>
+    </div>
     <div class="top_box">
-      <h1 class="top_title">
-      「日本語ってむずかしい」をゼロに
-      </h1>
-      <p class="top_about">
-      あなたが書いた文章をより良いものになる<br>言葉のレビューサイトです。
-      </p>
+      <div class="top_about">
+        <%= image_tag asset_path("logo.png") %>
+        <h1 class="top_title">
+          「日本語ってむずかしい」をゼロに
+        </h1>
+        <p class="top_body">
+          あなたが書いた文章をより良いものになる<br>言葉のレビューサイトです。
+        </p>
+      </div>
       <div class="top_btns">
         <% if current_user %>
           <%= link_to(new_post_path) do %>
@@ -21,36 +27,19 @@
             </button>
           <% end %>
          <% end %>
+      </div>
     </div>
-    </div>
-    
-    
   </div>
-</div>
-<div class="post_wrapper">
-  <div class="post_inner">
-    <ul class="index_ul">
+  <div class="top_index">
+    <ul class="top_index_ul">
       <% @posts.each do |post| %>
         <%= link_to(post_path(post)) do %>
           <li>
-            <div class="index_info">
-              <div class="user_index_avatar">
-              <% if post.user.avatar.attached? %>
-                <%= image_tag (post.user.avatar) %>
-              <% else %>
-                <%= image_tag asset_path ("/user_images/default_icon.jpg") %>
-              <% end %>
-              </div>
-              <p>
-              <%= post.user.name %>が
-              <%= post.created_at.strftime("%Y-%m-%d %H:%M") %>に投稿
-              </p>
-            </div>
-            <p class="post_index_tit"><%= post.title %></p>
-            <p class="post_index_body"><%= post.body[0, 40] %></p>
+            <p class="top_index_body"><%= post.body[0, 40] %></p>
           </li>
         <% end %>
       <% end %>
     </ul>
   </div>
 </div>
+

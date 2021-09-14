@@ -13,19 +13,13 @@
   </head>
 
   <body>
+    <% unless current_page?('/') %>
     <header class="header_wrapper">
       <div class="header_inner">
         <div class="header_logo">
-          <% if current_user %>
-            <%= link_to '/' do %>
+          <%= link_to '/' do %>
             <%= image_tag asset_path("logo.png") %>
           <% end %>
-        <% else %>
-            <%= link_to '/' do %>
-            <%= image_tag asset_path("logo.png") %>
-          <% end %>
-        <% end %>
-
         </div>
         <nav class="header_nav">
           <ul class="header_menus">
@@ -68,6 +62,7 @@
         </nav>
       </div>
     </header>
+    <% end %>
     <% if flash.notice.present? %>
       <div class="flash">
         <%= flash.notice %>
