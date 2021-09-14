@@ -214,22 +214,21 @@
 
 
 /* responsive */
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .post_inner {
     min-height: 70vh;
   }
 
   /* top */
   .top_wrapper {
-    display: block;
     margin-bottom: 50px;
     
   }
 
   .top_inner {
-    max-width: 880px;
-    min-height: 50vh;
-    background-size: 50%;
+    min-height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .top_title {
@@ -258,17 +257,10 @@
   }
 
   .top_inner {
-    background-image: none;
-    min-height: 80vh;
+    min-height: 60vh;
   }
 
   .top_box {
-    width: 90%;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
   }
 
   .top_title {
@@ -280,7 +272,7 @@
   }
 
   .top_btn {
-    width: 90%;
+    width: 70%;
   }
 
   /* post */

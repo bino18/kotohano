@@ -2,82 +2,66 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* top */
+
 .top_wrapper {
-  background-color: #fff;
-  color: #009944;
-  padding-top: 100px;
+  
 }
 
 .top_inner {
-  width: 1000px;
+  background-image: url("top-bgi.jpg");
+  background-size: cover;
+  margin-bottom: 50px;
+  min-height: 60vh;
+}
+
+.top_box {
+  max-width: 600px;
+  padding-top: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
-  display: flex;
-}
-
-.top_image {
-  width: 70%;
-}
-
-.top_image img {
-  width: 90%;
+  color: #fff;
 }
 
 .top_about {
-  padding: 2%;
-  text-align: left;
+  text-align: center;
 }
 
 .top_about img {
-  width: 160px;
-  margin-bottom: 30px;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
 .top_title {
   margin-bottom: 15px;
   font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .top_body {
   font-size: 1rem;
-  margin-bottom: 30px;
-  line-height: 2.2;
+  margin-bottom: 20px;
+}
+
+.top_btns {
+  text-align: center;
 }
 
 .top_btn {
   width: 200px;
   height: 50px;
-  background-color: #009944;
+  border: 2px solid #fff;
   transition-property: background-color, color;
   transition-duration: 0.3s;
-  margin-top: 8px;
-  color: #fafafa!important;
+  color: #fff!important;
 }
 
 .top_btn:hover {
-  background-color: #2e3740;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .top_index {
-  width: 1000px;
+  width: 800px;
+  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.top_index_ul {
-  border-left: 6px solid #009944;
-  margin-top: 40px;
-}
-
-.top_index_ul li {
-  margin: 6px 10px;
-}
-
-.top_index_ul li p{
-  display: inline-block;
-}
-
-.top_index_ul li p:hover {
-  background-color: #f3f3f3;
 }
