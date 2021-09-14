@@ -18,8 +18,8 @@ describe '投稿管理機能', type: :system do
   end
 
   #以下のitをshared_examples_forで共通化
-  #it 'ユーザーAが作成した投稿が表示されない' do
-    #expect(page).to have_no_content '投稿テスト'
+  #it 'ユーザーAが作成した投稿が表示される' do
+    #expect(page).to have_content '投稿テスト'
   #end
   shared_examples_for 'ユーザーAが作成した投稿が表示される' do
     it { expect(page).to have_content '投稿テスト' }
