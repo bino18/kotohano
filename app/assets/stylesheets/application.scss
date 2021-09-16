@@ -215,9 +215,11 @@
 
 /* responsive */
 @media (max-width: 1025px) {
-  .post_inner {
+  .post_index_inner {
     min-height: 70vh;
   }
+
+  .user_index_inner
 
   /* top */
   .top_wrapper {
