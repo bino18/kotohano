@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   end
 
   get '/',  to: 'top#top'
+  get '/terms',  to: 'top#terms'
+  get '/privacy',  to: 'top#privacy'
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

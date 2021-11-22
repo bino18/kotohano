@@ -208,8 +208,22 @@
   text-align: center;
 }
 
+.footer_inner {
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  margin-right: 10px;
+  color: #2e3740;
+}
+
+footer small {
+  color: #2e3740;
+}
+
 .footer_logo img {
-  width: 200px;
+  width: 180px;
 }
 
 
