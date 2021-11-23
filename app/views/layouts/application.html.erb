@@ -13,7 +13,6 @@
   </head>
 
   <body>
-    <% unless current_page?('/') %>
     <header class="header_wrapper">
       <div class="header_inner">
         <div class="header_logo">
@@ -62,7 +61,6 @@
         </nav>
       </div>
     </header>
-    <% end %>
     <% if flash.notice.present? %>
       <div class="flash">
         <%= flash.notice %>
