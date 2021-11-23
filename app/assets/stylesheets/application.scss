@@ -19,8 +19,8 @@
 #d8d8d8 グレー
 #f6f6f4 ライトグレー
 #009944 緑
-#00cc5c 明るい緑
-#ffbe1f イエロー
+#64d898 明るい緑
+#64d898 イエロー
 
   */
 
@@ -67,7 +67,7 @@
  }
 
  a:hover {
-  color: #00cc5c;
+  color: #64d898;
 }
 
  h1, h2 {
@@ -75,7 +75,7 @@
 
  .flash {
    color: #fff;
-   background-color: #00cc5c;
+   background-color: #64d898;
    text-align: center;
    padding: 5px;
  }
@@ -147,7 +147,7 @@
  }
 
  .header_menus a:hover {
-   color: #00cc5c;
+   color: #64d898;
  }
 
  .header_new_btn {
@@ -158,10 +158,11 @@
    text-align: center;
    transition-property: background-color;
    transition-duration: 0.3s;
+   font-weight: bold;
  }
 
  .header_new_btn:hover {
-   background-color: #00cc5c;
+   background-color: #64d898;
  }
 
  .fa-pen-fancy {
