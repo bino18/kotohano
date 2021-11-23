@@ -14,14 +14,14 @@
  *= require_self
  */
 /* color
-#fafafa 白
-#0F1111 黒
-#2e3740 青黒
+#fff 白
+#2e3740 黒
 #d8d8d8 グレー
-#f9fbfe ライトグレー
+#f6f6f4 ライトグレー
 #009944 緑
-#007d95 青緑
+#00cc5c 明るい緑
 #ffbe1f イエロー
+
   */
 
 @import "reset";
@@ -66,13 +66,16 @@
    font-size: 0.875rem;
  }
 
+ a:hover {
+  color: #00cc5c;
+}
+
  h1, h2 {
  }
 
  .flash {
-   color: #fafafa;
-   background: rgb(5,167,123);
-   background: linear-gradient(90deg, rgba(5,167,123,1) 28%, rgba(0,125,149,1) 100%);
+   color: #fff;
+   background-color: #00cc5c;
    text-align: center;
    padding: 5px;
  }
@@ -90,7 +93,7 @@
   width: 300px;
   height: 45px;
   font-size: 1rem;
-  color: #fafafa;
+  color: #fff;
 }
 
  .user_avatar img {
@@ -141,6 +144,10 @@
    padding: 8px;
    height: 100%;
    color: #009944;
+ }
+
+ .header_menus a:hover {
+   color: #00cc5c;
  }
 
  .header_new_btn {

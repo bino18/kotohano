@@ -61,7 +61,7 @@
 }
 
 .index_ul li:hover {
-  background-color: #f3f3f3;
+  background-color: #f6f6f4;
 }
 
 .mb-3 {
@@ -184,7 +184,7 @@
   width: 70px;
   height: 40px;
   font-size: 1rem;
-  color: #fafafa !important;
+  color: #fff !important;
   transition-property: background-color;
   transition-duration: 0.3s;
   background-color: #009944;
@@ -202,11 +202,6 @@
 .comment_bottom a {
   font-weight: bold;
   font-size: 1rem;
-}
-
-.comment_bottom a:hover {
-  color: #009944;
-
 }
 
 .comment-evaluation img {
