@@ -283,7 +283,7 @@ footer small {
   }
 
   .top_inner {
-    min-height: 60vh;
+    min-height: 40vh;
   }
 
   .top_box {
@@ -299,6 +299,19 @@ footer small {
 
   .top_btn {
     width: 70%;
+  }
+
+  .about_wrapper {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+
+  .about_wrapper h1{
+    font-size: 1.6rem;
+  }
+
+  .about_wrapper h2{
+    font-size: 1.2rem;
   }
 
   /* post */
