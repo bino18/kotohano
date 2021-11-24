@@ -42,8 +42,24 @@ describe '投稿管理機能', type: :system do
     context 'ユーザーAがログインしている時' do
       let(:login_user) {user_a}
 
-      it '新規作成機能のテストが作成される' do
+      it '投稿が作成される' do
         expect(page).to have_content '[タイトル]新規作成機能のテスト'
+      end
+    end
+    
+    describe '投稿編集機能' do
+      before do
+        click_link '編集する'
+        fill_in 'タイトル', with: '[タイトル]投稿編集機能のテスト'
+        click_button '更新する'
+      end
+
+      context 'ユーザーAがログインしている時' do
+        let(:login_user) {user_a}
+  
+        it '投稿が編集される' do
+          expect(page).to have_content '[タイトル]投稿編集機能のテスト'
+        end
       end
     end
   end
