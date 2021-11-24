@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :comment do
-    content { 'コメントのテスト' }
-    evaluation { 3 }
+    content { '[テスト]読みやすくていいと思う' }
+    evaluation { 4 }
     user
     post
   end
