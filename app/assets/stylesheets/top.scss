@@ -7,7 +7,7 @@
   /*background-image: image-url("top-bgi.jpg");
   background-size: cover;*/
   background: rgb(0,153,68);
-  background: linear-gradient(90deg, rgba(0,153,68,1) 0%, rgba(100,216,152,1) 100%);
+  background: linear-gradient(90deg, rgba(0,153,68,1) 0%, rgba(11,68,36,1) 100%);
   min-height: 70vh;
   padding: 7%;
 }
@@ -67,7 +67,6 @@
 
 .about_wrapper h1 {
   font-size: 3rem;
-  margin-bottom: 40px;
 }
 
 .about_inner {
@@ -82,7 +81,8 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #64d898;
+  background: rgb(161,244,158);
+  background: linear-gradient(90deg, rgba(161,244,158,1) 0%, rgba(100,216,152,1) 100%);
 }
 
 .about_img img {
