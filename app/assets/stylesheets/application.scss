@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -16,15 +17,13 @@
 /* color
 #fff 白
 #2e3740 黒
+#787878 ダークグレー
 #d8d8d8 グレー
 #f6f6f4 ライトグレー
 #009944 緑
-#64d898 明るい緑
-#64d898 イエロー
+#00c559 明るい緑
 
-  */
-
-@import "reset";
+*/
 
  * {
    box-sizing: border-box;
@@ -67,7 +66,7 @@
  }
 
  a:hover {
-  color: #64d898;
+  color: #00c559;
 }
 
  h1, h2 {
@@ -75,7 +74,7 @@
 
  .flash {
    color: #fff;
-   background-color: #64d898;
+   background-color: #00c559;
    text-align: center;
    padding: 5px;
  }
@@ -109,7 +108,7 @@
  }
 
  .header_inner {
-   max-width: 800px;
+   max-width: 1000px;
    height: 65px;
    margin-left: auto;
    margin-right: auto;
@@ -147,7 +146,7 @@
  }
 
  .header_menus a:hover {
-   color: #64d898;
+   color: #00c559;
  }
 
  .header_new_btn {
@@ -162,7 +161,7 @@
  }
 
  .header_new_btn:hover {
-   background-color: #64d898;
+   background-color: #00c559;
  }
 
  .fa-pen-fancy {
@@ -284,17 +283,29 @@ footer small {
 
   .top_inner {
     min-height: 40vh;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top_illust {
+    padding-top: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .top_box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 
-  .top_title {
-    font-size: 1.5rem;
+  .top_about h1 {
+    font-size: 1.2rem;
   }
 
-  .top_about {
-    font-size: 1rem;
+  .top_about p {
+    font-size: 0.9rem;
   }
 
   .top_btn {
@@ -306,12 +317,31 @@ footer small {
     padding-bottom: 30px;
   }
 
-  .about_wrapper h1{
-    font-size: 1.6rem;
+  .about_inner h1{
+    font-size: 1.4rem;
   }
 
-  .about_wrapper h2{
-    font-size: 1.2rem;
+  .about_inner h2{
+    font-size: 1rem;
+  }
+
+  .scene_boxes {
+    flex-direction: column;
+  }
+
+  .scene_box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 20px 0;
+  }
+
+  .scene_inner h1 {
+    font-size: 1.4rem;
+  }
+
+  .scene_box_inner h2 {
+    font-size: 1rem;
   }
 
   /* post */
