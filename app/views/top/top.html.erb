@@ -2,10 +2,10 @@
   <div class="top_inner">
     <div class="top_box">
       <div class="top_about">
-        <h1 class="top_title">
+        <h1>
           「日本語ってむずかしい」をゼロに
         </h1>
-        <p class="top_body">
+        <p>
           あなたが書いた文章がより良いものになる<br>言葉のレビューサイト
         </p>
       </div>
@@ -25,28 +25,63 @@
          <% end %>
       </div>
     </div>
+    <div class="top_illust">
+      <%= image_tag asset_path("top-img.png") %>
+    </div>
   </div>
 </div>
 <div class="about_wrapper">
-  <h1>kotohanoを使ってみよう</h1>
   <div class="about_inner">
-    <div class="about_img">
-      <%= image_tag asset_path("scr_post.png") %>
+    <h1>kotohanoとは</h1>
+    <p>アプリの説明</p>
+    <p>目的など</p>
+    <div class="about_box">
+      <div class="about_img">
+        <%= image_tag asset_path("scr-post.png") %>
+      </div>
+      <div class="about_text">
+        <h2>レビューして欲しい言葉を入力しよう</h2>
+        <p>アプリの使い方</p>
+        <p>投稿時のポイントなど</p>
+      </div>
     </div>
-    <div class="about_text">
-      <h2>レビューして欲しい言葉を入力しよう</h2>
-      <p>多くの人が読む文章を、事前にユーザーがチェック</p>
-      <p>誤字脱字、不適切な表現の有無や読んだ印象などをレビューしてもらおう</p>
+    <div class="about_box">
+      <div class="about_img">
+        <%= image_tag asset_path("scr-comment.png") %>
+      </div>
+      <div class="about_text">
+        <h2>コメントで言葉を評価しよう</h2>
+        <p>コメント機能について</p>
+        <p>評価のポイントなど</p>
+      </div>
     </div>
   </div>
-  <div class="about_inner">
-    <div class="about_img">
-      <%= image_tag asset_path("scr_comment.png") %>
-    </div>
-    <div class="about_text">
-      <h2>コメントで言葉を評価しよう</h2>
-      <p>どんな印象を持ったかコメントしよう</p>
-      <p>五つ星で評価しよう</p>
+</div>
+<div class="scene_wrapper">
+  <div class="scene_inner">
+    <h1>使い方</h1>
+    <div class="scene_boxes">
+      <div class="scene_box">
+        <div class="scene_box_inner">
+          <h2>シーン1</h2>
+          <%= image_tag asset_path("scene1.png") %>
+        </div>
+        <p>説明を二行ほど</p>
+      </div>
+      <div class="scene_box">
+        <div class="scene_box_inner">
+          <h2>シーン1</h2>
+          <%= image_tag asset_path("scene2.png") %>
+        </div>
+        <p>説明を二行ほど</p>
+      </div>
+      <div class="scene_box">
+        <div class="scene_box_inner">
+          <h2>シーン1</h2>
+          <%= image_tag asset_path("scene3.png") %>
+        </div>
+        <p>説明を二行ほど</p>
+      </div>
     </div>
   </div>
 </div>
