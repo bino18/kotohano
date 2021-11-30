@@ -16,13 +16,13 @@
   background: linear-gradient(90deg, rgba(0,153,68,1) 0%, rgba(11,68,36,1) 100%);*/
   display: flex;
   justify-content: space-around;
-  max-width: 1100px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .top_box {
-  width: 65%;
+  width: 60%;
   color: #2e3740;
   padding-top: 20px;
 }
@@ -40,7 +40,9 @@
 }
 
 .top_about h1 {
+  display: inline-block;
   border-bottom: 6px solid #009944;
+  padding: 5px 10px;
   margin-bottom: 15px;
   font-size: 1.8rem;
 }
@@ -90,9 +92,14 @@
 
 .about_inner p {
   color: #787878;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
 .about_box {
+  margin-top: 50px;
   margin-bottom: 50px;
   padding: 2%;
 }
@@ -120,6 +127,7 @@
 .about_text h2 {
   margin-bottom: 20px;
   border-bottom: 4px solid #00c559;
+  padding: 5px 10px;
   display: inline-block;
 }
 
