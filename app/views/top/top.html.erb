@@ -55,32 +55,47 @@
         <p>読んでどう感じたか、投稿者の意図通りに伝わったかを評価しましょう。</p>
       </div>
     </div>
+    <div class="top_btns">
+        <% if current_user %>
+          <%= link_to(new_post_path) do %>
+            <button type="button" name="button" class="top_btn">
+              文章を投稿する
+            </button>
+          <% end %>
+        <% else %>
+          <%= link_to(login_path) do %>
+            <button type="button" name="button" class="top_btn">
+              ログインして投稿する
+            </button>
+          <% end %>
+         <% end %>
+      </div>
   </div>
 </div>
 <div class="scene_wrapper">
   <div class="scene_inner">
-    <h1>使い方</h1>
+    <h1>利用シーン</h1>
     <div class="scene_boxes">
       <div class="scene_box">
         <div class="scene_box_inner">
-          <h2>シーン1</h2>
+          <h2>SNSで</h2>
           <%= image_tag asset_path("scene1.png") %>
         </div>
-        <p>説明を二行ほど</p>
+        <p>SNSはまさに多くの人の目に触れる場です。あなたの言葉を他の人はどう感じるでしょう。</p>
       </div>
       <div class="scene_box">
         <div class="scene_box_inner">
-          <h2>シーン1</h2>
+          <h2>ビジネスで</h2>
           <%= image_tag asset_path("scene2.png") %>
         </div>
-        <p>説明を二行ほど</p>
+        <p>相手に対して失礼な言い回しはないか、自分で読んだだけではなかなか気づきにくいものです。</p>
       </div>
       <div class="scene_box">
         <div class="scene_box_inner">
-          <h2>シーン1</h2>
+          <h2>プライベートで</h2>
           <%= image_tag asset_path("scene3.png") %>
         </div>
-        <p>説明を二行ほど</p>
+        <p></p>
       </div>
     </div>
   </div>
