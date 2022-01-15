@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
   end
 
-  get '/', 　to: 'top#top'
+  get '/',  to: 'top#top'
   get '/terms',  to: 'top#terms'
   get '/privacy',  to: 'top#privacy'
   
