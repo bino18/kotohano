@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
 
     if @post.save
-      redirect_to post_url(@post), notice: '投稿できました!'
+      redirect_to post_url(@post), notice: '投稿しました！'
     else
       render :new
     end
